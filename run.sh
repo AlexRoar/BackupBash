@@ -22,7 +22,7 @@ copy_dir_files() { # (1:directory, 2:targetDirectory, 3:fileExtension
       copy_dir_files "$1/$var" "$2/$var" "$3"
     else
       if [[ $var == *.$3 ]]; then
-        echo "From $1/$var to $2/$var"
+        # echo "From $1/$var to $2/$var"
         cp "$1/$var" "$2/$var"
       fi
     fi
