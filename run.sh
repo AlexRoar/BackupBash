@@ -18,9 +18,12 @@ copy_dir_files() { # (1:directory, 2:targetDirectory, 3:fileExtension
     fi
 
     if [ -d "$1/$var" ]; then
+      mkdir "$2/$var"
       copy_dir_files "$1/$var" "$2/$var" "$3"
     else
-      echo "From $1/$var to $2/$var"
+      if [[ $var == *.$3 ]]; then
+        echo "From $1/$var to $2/$var"
+      fi
     fi
   done
 }
