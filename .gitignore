@@ -1,2 +1,5 @@
 .idea
 .DS_STORE
+test
+backup
+backup.tar.gz
